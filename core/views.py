@@ -14,6 +14,7 @@ class TenantProfileViewSet(viewsets.ModelViewSet):
     queryset = TenantProfile.objects.all()
     serializer_class = TenantProfileSerializer
 
+
 class AgreementViewSet(viewsets.ModelViewSet):
     queryset = Agreement.objects.all()
     serializer_class = AgreementSerializer
