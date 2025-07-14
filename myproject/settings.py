@@ -65,7 +65,10 @@ MIDDLEWARE = [
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
     
 ]
-
+CSRF_TRUSTED_ORIGINS = [
+    'https://web-production-f6fa0.up.railway.app',
+    'http://localhost:8000',
+]
 ROOT_URLCONF = "myproject.urls"
 
 TEMPLATES = [
