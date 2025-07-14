@@ -40,7 +40,7 @@ GET /api/agreements/    # view existing agreements
 🛠️ Setup (Local)
 
 # Clone and CD
-git clone https://github.com/your-username/tenancytrust-backend.git
+git clone https://github.com/ayoeze191/tenancytrust-backend.git
 cd tenancytrust-backend
 
 # Create and activate virtualenv
