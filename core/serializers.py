@@ -1,12 +1,6 @@
 # core/serializers.py
 from rest_framework import serializers
 from .models import Property, TenantProfile, Agreement, Picture
-
-class PropertySerializer(serializers.ModelSerializer):
-    class Meta:
-        model = Property
-        fields = '__all__'
-
 class TenantProfileSerializer(serializers.ModelSerializer):
     class Meta:
         model = TenantProfile
@@ -19,12 +13,14 @@ class AgreementSerializer(serializers.ModelSerializer):
 
 
 class PropertyImageSerializer(serializers.ModelSerializer):
+    image_url = serializers.ImageField(source='image', read_only=True)
+
     class Meta:
         model = Picture
-        fields = ['id', 'image']
+        fields = ['id', 'image_url']
 
 class PropertySerializer(serializers.ModelSerializer):
-    images = PropertyImageSerializer(many=True, read_only=True)
+    pictures = PropertyImageSerializer(many=True, read_only=True)
 
     class Meta:
         model = Property
